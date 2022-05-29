@@ -1,0 +1,11 @@
+@mixin flex($directions: row, $align: center, $justify: space-between) {
+  display: flex;
+  flex-direction: $directions;
+  align-items: $align;
+  justify-content: $justify;
+}
+@mixin breakpoint($screenWidth) {
+  @media (max-width: $screenWidth) {
+    @content;
+  }
+}

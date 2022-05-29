@@ -1,0 +1,15 @@
+.container {
+  max-width: $grid-width;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+
+  .col {
+    width: calc((100% - #{$gutter-horizontal}) / 2);
+    background-color: orangered;
+    float: left;
+    &:not(:last-child) {
+      margin-right: $gutter-horizontal;
+    }
+  }
+}

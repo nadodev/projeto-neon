@@ -1,0 +1,346 @@
+.hero {
+  width: 100%;
+  height: 786px;
+
+  background: url("../../src/image/bg-hero.svg") no-repeat center center;
+  padding-top: 175px;
+  .container {
+    @include flex(row, flex-start, space-between);
+  }
+  &__content-text {
+    width: 100%;
+    max-width: 684px;
+  }
+  &__title {
+    color: var(--gray-100);
+    margin-bottom: 32px;
+  }
+  &__subtitle {
+    color: var(--gray-100);
+    font-weight: 600;
+    margin-bottom: 39px;
+  }
+
+  &__list {
+    @include flex;
+  }
+
+  &__item {
+    max-width: 621px;
+    width: 100%;
+    display: flex;
+
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 22px;
+    color: var(--gray-100);
+    gap: 12px;
+  }
+
+  &__icon {
+    @include flex(row, center, center);
+    max-width: 48px;
+    width: 100%;
+    height: 48px;
+    border-radius: 50%;
+    background: linear-gradient(180deg, rgba(53, 203, 226, 0.4) 0%, rgba(53, 202, 226, 0) 100%);
+  }
+
+  button {
+    margin-bottom: 64px;
+  }
+
+  &__content-image {
+    width: 100%;
+    max-width: 706px;
+    margin-right: -184px;
+
+    &-title {
+      margin-bottom: 60px;
+      text-align: center;
+      color: var(--gray-100);
+      font-weight: 600;
+      opacity: 0.4;
+    }
+  }
+
+  &__image {
+    position: relative;
+    width: 100%;
+    height: 541px;
+    top: 43px;
+
+    &-card-front,
+    &-card-back,
+    &-circle-card {
+      position: absolute;
+    }
+
+    &-card-front {
+      z-index: 3;
+      top: 41px;
+    }
+    &-card-back {
+      z-index: 2;
+      right: 86px;
+      bottom: 46px;
+    }
+
+    &-circle-card {
+      top: 28px;
+      right: 43px;
+      z-index: 1;
+    }
+  }
+}
+
+.card-neon {
+  margin-bottom: 13.4rem;
+  padding: 129px 0 0 0;
+
+  .container {
+    @include flex(row, flex-start, space-between);
+  }
+
+  &__left {
+    width: 100%;
+    max-width: 27.7rem;
+  }
+
+  &__mockup {
+    width: 100%;
+    max-width: 27.7rem;
+    position: relative;
+
+    margin-bottom: 6rem;
+    z-index: 2;
+    &-circle {
+      position: absolute;
+      max-width: 37.7rem;
+      z-index: 1;
+      top: 8.7rem;
+      right: 11.5rem;
+    }
+  }
+
+  &__text {
+    width: 100%;
+    max-width: 27.7rem;
+    @include flex(column, center, center);
+    text-align: center;
+    position: relative;
+
+    &::before {
+      content: "";
+      position: absolute;
+      width: 5px;
+      height: 83px;
+      top: -104px;
+      left: 50%;
+      right: 50%;
+      z-index: 33;
+      background: url("../image/points.svg") no-repeat;
+    }
+  }
+
+  &__icon {
+    margin-bottom: 3.1rem;
+  }
+
+  &__info {
+    h3 {
+      margin-bottom: 3.1rem;
+    }
+    p {
+      font-family: "Inter";
+      font-weight: 400;
+      font-size: 1.6rem;
+      line-height: 150%;
+      margin-bottom: 1.8rem;
+      color: var(--gray-400);
+    }
+  }
+  &__list {
+    li {
+      margin-bottom: 2.141rem;
+    }
+  }
+
+  &__right {
+    max-width: 80rem;
+    width: 100%;
+
+    &--title {
+      max-width: 48.8rem;
+      margin-bottom: 4.9rem;
+    }
+
+    &--list {
+      margin-bottom: 3.2rem;
+    }
+
+    &--item {
+      @include flex(row, center, space-between);
+      gap: 3.5rem;
+      border-bottom: 1px solid rgba(225, 234, 231, 0.9);
+      padding: 3.3rem 0;
+      &:first-child {
+        padding-top: 0;
+      }
+
+      img {
+        display: block;
+      }
+      h3 {
+      }
+      p {
+        font-family: "Inter";
+        font-weight: 400;
+        font-size: 1.8rem;
+        line-height: 150%;
+        color: var(--gray-300);
+      }
+    }
+
+    &--info {
+      @include flex(column, flex-start, center);
+      width: 100%;
+    }
+
+    &--link {
+      font-weight: 500;
+      font-size: 16px;
+      line-height: 112%;
+
+      letter-spacing: -0.5px;
+      margin-bottom: 17.4rem;
+      display: inline-block;
+      color: var(--brand-blue);
+      position: relative;
+      &::after {
+        content: "";
+        position: absolute;
+        right: -1.8rem;
+        bottom: 0;
+        display: block;
+        width: 10px;
+        height: 3px;
+        background: var(--brand-yellow);
+      }
+    }
+  }
+
+  &__box {
+    width: 100%;
+    height: 41rem;
+    @include flex(row, center, justify-between);
+    background: url("../../src/image/bg-box-card-neon.svg") no-repeat center center;
+    border-radius: 1.2rem;
+    padding-left: 39px;
+
+    &--title {
+      color: var(--gray-100);
+      margin-bottom: 1.1rem;
+    }
+    &--subtitle {
+      color: var(--gray-100);
+      margin-bottom: 0.8rem;
+      max-width: 32.7rem;
+    }
+
+    p {
+      font-family: "Inter";
+      font-weight: 400;
+      font-size: 1.6rem;
+      line-height: 150%;
+      color: var(--gray-100);
+      max-width: 32.7rem;
+      margin-bottom: 3.1rem;
+    }
+    &--button {
+      @include flex(row, center, flex-start);
+      gap: 1.6rem;
+    }
+    &--left {
+      width: 100%;
+      max-width: 50rem;
+    }
+    &--right {
+      margin-right: -3.2rem;
+    }
+  }
+}
+
+.card-depoimentos {
+  margin-bottom: 13.4rem;
+  &__title {
+    margin-bottom: 4rem;
+    span {
+      display: block;
+      color: var(--gray-200);
+      margin-bottom: 1.4rem;
+    }
+  }
+  &__top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    .swiper-pagination {
+      position: relative !important;
+      max-width: 10%;
+    }
+    .swiper-pagination-bullet {
+      width: 8.62px;
+      height: 7px;
+      transition: all 0.3s;
+      background: #ffc800;
+      border-radius: 12px;
+      &-active {
+        width: 17.23px;
+        height: 7px;
+        background: #ffc800;
+        border-radius: 12px;
+      }
+    }
+  }
+  &__slider {
+    overflow: hidden;
+  }
+}
+
+.conta-digital {
+  padding-bottom: 18.5rem;
+
+  &__left {
+    max-width: 60.2rem;
+
+    &--title {
+      color: var(--gray-600);
+      margin-bottom: 4.5rem;
+      span {
+        display: block;
+        color: var(--gray-200);
+        margin-bottom: 0.9rem;
+      }
+    }
+  }
+  &__list {
+    @include flex(column, flex-start, center);
+    gap: 5px;
+  }
+
+  &__item {
+    @include flex(row, center, center);
+    margin-bottom: 3.7rem;
+    gap: 2.6rem;
+    &--img {
+      background-color: var(--brand-green-light);
+      width: 45px;
+      height: 45px;
+      border-radius: 1rem;
+
+      @include flex(row, center, center);
+    }
+  }
+}

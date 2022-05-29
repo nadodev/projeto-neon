@@ -1,0 +1,8 @@
+//helpers
+@import "helpers/mixins", "helpers/variables", "helpers/animate", "helpers/grid", "helpers/reset";
+
+//components
+@import "components/button", "components/card", "components/footer", "components/header", "components/titles";
+
+//pages
+@import "pages/home";

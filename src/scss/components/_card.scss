@@ -1,0 +1,28 @@
+.card {
+  width: 100%;
+  max-width: 50rem;
+  background-color: var(--gray-100);
+
+  border-radius: 8px;
+
+  padding: 3.7rem 3.2rem 2.3rem 3.2rem;
+
+  &__user {
+    @include flex;
+    margin-bottom: 2.1rem;
+
+    span {
+      display: block;
+      font-weight: 600;
+      font-size: 1.8rem;
+      line-height: 112%;
+      letter-spacing: -0.1rem;
+      color: var(--gray-500);
+    }
+  }
+  &__text {
+    font-size: 1.8rem;
+    line-height: 150%;
+    color: var(--gray-400);
+  }
+}
