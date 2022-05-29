@@ -396,6 +396,18 @@
     &--list {
       @include flex(row, center, center);
       gap: 2.6rem;
+
+      li {
+        a {
+          img {
+            transition: all 0.3s;
+            &:hover {
+              filter: brightness(0.8);
+              transform: scale(1.2);
+            }
+          }
+        }
+      }
     }
   }
 
@@ -420,8 +432,15 @@
           font-weight: 400;
           font-size: 14px;
           line-height: 17px;
-          color: rgba(255, 255, 255, 0.7);
+          color: rgba(255, 255, 255, 0.9);
           margin-bottom: 29px;
+
+          a {
+            transition: all 0.3s;
+            &:hover {
+              filter: brightness(0.8);
+            }
+          }
         }
       }
       &__menu01 {
@@ -487,6 +506,10 @@
             font-size: 14px;
             line-height: 150%;
           }
+        }
+        transition: all 0.3s;
+        &:hover {
+          background-color: var(--brand-yellow);
         }
       }
     }
